@@ -1,0 +1,82 @@
+@import "config";
+//nav
+
+.nav{
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+
+    .brand-logo{
+        i{
+            color: $primary-color;
+        }
+    }
+
+    .menu{
+        display: flex;
+
+        &-item{
+            padding: 0 30px;
+            text-decoration: none;
+            color: $secondary-color;
+            &:hover{
+                color: $primary-color;
+            }
+        }
+    }
+}
+
+#showcase{
+    background: url("../img/showcase.png") no-repeat center center/cover;
+    height: 100vh;
+    background-attachment: fixed;    
+
+    .overlay{
+        position: absolute;
+        right: 0;
+        width: 100%;
+        height: calc(100%-1rem);
+        background: rgba(68,68,68,0.6);
+
+        .showcase-content{    
+            min-height: 100vh;
+            color: #fff;
+            padding: 6rem 0;
+
+            h1{
+                font-weight: bold;
+            }
+
+            p{
+                font-size: 1.4rem;
+            }
+
+            .loader{
+                text-align: center;
+                margin-top: 2.5rem;
+            }
+        }
+    }
+}
+
+footer{
+    background: lighten(rgba(68,68,68,0.6), 15);
+    width: 100%;
+}
+
+
+//small screen sizes
+@media only screen and (max-width:600px) {
+    .showcase-content{
+        text-align: center;
+    }
+    h1{
+        font-size: 1.5rem;
+    }
+    
+    p{
+        font-size: 0.5rem;
+        font-weight:lighter;
+    }
+}
